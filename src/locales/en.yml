@@ -1,6 +1,7 @@
 messages:
   welcome: Welcome to your Bourgeon app!
   hello: Hello {name}!
+  404: 404 not found!
 buttons:
   home: Home
   hello: Hello

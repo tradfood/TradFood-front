@@ -27,7 +27,7 @@ export default {
     this.$http.get(url).then(response => {
       this.city = response.body
     }, response => {
-      console.log(response)
+      this.$router.push('/')
     })
   },
   computed: {
