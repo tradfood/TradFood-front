@@ -22,7 +22,6 @@ html
     font-size 50%
 
 #app
-  align() // jeet
   text-align center
 
 .icon-logo
