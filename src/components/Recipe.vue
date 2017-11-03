@@ -4,9 +4,9 @@
     <h2>Description</h2>
     <p>{{ recipe.description }}</p>
     <h2>Ingrédients</h2>
-    <p>{{ recipe.ingredients }}</p>
+    <p>{{ recipe.ingredients | compiledMarkdown }}</p>
     <h2>Recette</h2>
-    <p>{{ recipe.recipe }}</p>
+    <p>{{ recipe.recipe | compiledMarkdown }}</p>
     <p>
       <router-link to="/">{{ $t('buttons.home') }}</router-link>
     </p>
@@ -15,6 +15,7 @@
 
 <script>
 export default {
+  filters: require('../mixins/Filters'),
   data: function () {
     return {
       recipe: []

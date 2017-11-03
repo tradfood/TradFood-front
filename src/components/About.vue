@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ msg }}</h1>
+    <h1>{{ msg | capitalize }}</h1>
     <p>
       <router-link to="/">{{ $t('buttons.home') }}</router-link>
     </p>
@@ -10,6 +10,7 @@
 <script>
 export default {
   computed: {
+    filters: require('../mixins/Filters'),
     msg () {
       return this.$t('messages.hello', { name: this.name })
     },

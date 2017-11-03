@@ -16,6 +16,7 @@
     "store": "src/store.js"
   },
   "dependencies": {
+    "marked": "^0.3.6",
     "vue": "^2.2.4",
     "vue-i18n": "^5.0.3",
     "vue-resource": "^1.3.4",

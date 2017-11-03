@@ -2,6 +2,7 @@
   <div class="hello">
     <h1>{{ name }}</h1>
     <p>{{ city.description }}</p>
+    <router-link to="/">{{ $t('buttons.home') }}</router-link>
     <ul v-for="recipe in city.recipes">
       <li>
         <router-link :to="{name: 'recipe', params: {city: city.url, recipe: recipe.url} }">
@@ -9,14 +10,12 @@
         </router-link>
       </li>
     </ul>
-    <p>
-      <router-link to="/">{{ $t('buttons.home') }}</router-link>
-    </p>
   </div>
 </template>
 
 <script>
 export default {
+  filters: require('../mixins/Filters'),
   data: function () {
     return {
       city: []
