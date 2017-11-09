@@ -2,11 +2,11 @@
   <div class="hello">
     <h1>{{ recipe.name }}</h1>
     <h2>Description</h2>
-    <p>{{ recipe.description }}</p>
+    <p v-html="$options.filters.compiledMarkdown(recipe.description)"></p>
     <h2>Ingrédients</h2>
-    <p>{{ recipe.ingredients | compiledMarkdown }}</p>
+    <p v-html="$options.filters.compiledMarkdown(recipe.ingredients)"></p>
     <h2>Recette</h2>
-    <p>{{ recipe.recipe | compiledMarkdown }}</p>
+    <p v-html="$options.filters.compiledMarkdown(recipe.recipe)"></p>
     <p>
       <router-link to="/">{{ $t('buttons.home') }}</router-link>
     </p>
