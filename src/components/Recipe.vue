@@ -2,7 +2,7 @@
   <div class="hello">
     <h1>{{ recipe.name }}</h1>
     <h2>Description</h2>
-    <p v-html="$options.filters.compiledMarkdown(recipe.description)"></p>
+    <p>{{ recipe.description }}</p>
     <h2>Ingrédients</h2>
     <p v-html="$options.filters.compiledMarkdown(recipe.ingredients)"></p>
     <h2>Recette</h2>
