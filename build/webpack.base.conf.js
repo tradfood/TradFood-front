@@ -54,6 +54,10 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.(png|woff|woff2|eot|ttf|svg|ttc)$/,
+        loader: 'url'
+      },
+      {
         test: /\.json$/,
         loader: 'json'
       },
@@ -67,14 +71,6 @@ module.exports = {
         query: {
           limit: 10000,
           name: utils.assetsPath('img/[name].[hash:7].[ext]')
-        }
-      },
-      {
-        test: /\.(woff2?|eot|ttf|otf)(\?.*)?$/,
-        loader: 'url',
-        query: {
-          limit: 10000,
-          name: utils.assetsPath('fonts/[name].[hash:7].[ext]')
         }
       }
     ]

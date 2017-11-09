@@ -34,6 +34,5 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style lang="stylus" scoped>
-h1
-  color green
+  @import "../styles/application/recipe"
 </style>
