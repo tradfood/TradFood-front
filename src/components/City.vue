@@ -1,6 +1,6 @@
 <template>
   <div class="hello">
-    <h1>{{ name }}</h1>
+    <h1>{{ city.name }}</h1>
     <p>{{ city.description }}</p>
     <router-link to="/">{{ $t('buttons.home') }}</router-link>
     <br><br>
@@ -21,7 +21,7 @@
 
     <br><br>
 
-    <ul v-for="recipe in city.recipes">
+    <ul v-for="recipe in recipes">
       <li>
         <router-link :to="{name: 'recipe', params: {city: city.url, recipe: recipe.url} }">
           {{ recipe.name }} |
@@ -40,6 +40,7 @@ export default {
   data: function () {
     return {
       city: [],
+      recipes: '',
       filtersData: {
         mealType: 'all',
         difficulty: 'all'
@@ -64,6 +65,7 @@ export default {
     const url = 'https://tradfood.fr/' + this.$route.params.city + '.json'
     this.$http.get(url).then(response => {
       this.city = response.body
+      this.recipes = response.body.recipes
     }, response => {
       this.$router.push('/')
     })
@@ -85,7 +87,7 @@ export default {
         }
       }
 
-      console.log(filteredRecipes)
+      this.recipes = filteredRecipes
     }
   }
 }
