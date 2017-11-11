@@ -6,15 +6,15 @@
     <br><br>
 
     <label for="mealType">Type :</label>
-    <select v-model="filtersData.mealType" id="mealType" @change="sort()">
-      <option v-for="option in filtersOptions.mealType" v-bind:value="option.value">
+    <select v-model="filtersData.mealType" id="mealType" @change="sort">
+      <option v-for="option in filtersOptions.mealType" :value="option.value">
         {{ option.text }}
       </option>
     </select>
     <br>
     <label for="difficulty">Difficulté :</label>
-    <select v-model="filtersData.difficulty" id="difficulty" @change="sort()">
-      <option v-for="option in filtersOptions.difficulty" v-bind:value="option.value">
+    <select v-model="filtersData.difficulty" id="difficulty" @change="sort">
+      <option v-for="option in filtersOptions.difficulty" :value="option.value">
         {{ option.text }}
       </option>
     </select>
