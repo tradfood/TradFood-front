@@ -8,5 +8,20 @@ module.exports = {
   },
   compiledMarkdown: function (input) {
     return marked(input, { sanitize: true })
+  },
+  recipeDescription: function (input) {
+    let s = input.split(' ')
+    let l = 100
+    let r = ''
+    for (let i = 0; i < s.length; i++) {
+      if (r.length < l) {
+        r += (' ' + s[i])
+      }
+    }
+    r += '...'
+    return r
+  },
+  formatUrl: function (input) {
+    return 'https://tradfood.fr/' + input
   }
 }
