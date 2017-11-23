@@ -1,40 +1,47 @@
 <template>
-  <div class="hello">
+  <div>
     <h1>{{ city.name }}</h1>
     <p>{{ city.description }}</p>
     <router-link to="/">{{ $t('buttons.home') }}</router-link>
-    <br><br>
 
-    <label for="mealType">Type :</label>
-    <select v-model="filtersData.mealType" id="mealType" @change="sort">
-      <option v-for="option in filtersOptions.mealType" :value="option.value">
-        {{ option.text }}
-      </option>
-    </select>
-    <br>
-    <label for="difficulty">Difficulté :</label>
-    <select v-model="filtersData.difficulty" id="difficulty" @change="sort">
-      <option v-for="option in filtersOptions.difficulty" :value="option.value">
-        {{ option.text }}
-      </option>
-    </select>
+    <section id="sort">
+      <div class="radio-group">
+        <h2>Mealtype</h2>
+        <span v-for="option in filtersOptions.mealType">
+          <label :for="'difficulty-'+option.value">{{ option.text }}</label>
+          <input type="radio" name="mealType" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.mealType' @change='sort'>
+        </span>
 
-    <br><br>
+        <h2>Difficulty</h2>
+        <span v-for="option in filtersOptions.difficulty">
+          <label :for="'mealType-'+option.value">{{ option.text }}</label>
+          <input type="radio" name="difficulty" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.difficulty' @change='sort'>
+        </span>
+      </div>
+    </section>
 
-    <ul v-for="recipe in recipes">
-      <li>
+    <ul id="recipes">
+      <li v-for="recipe in recipes">
         <router-link :to="{name: 'recipe', params: {city: city.url, recipe: recipe.url} }">
-          {{ recipe.name }} |
-          {{ recipe.difficulty }} |
-          {{ recipe.meal_type }}
+          <div class="img-wrap">
+            <img :src="$options.filters.formatUrl(recipe.image.url)" :alt="recipe.name">
+          </div>
+          <span class="title">{{ recipe.name }}</span>
+          <span class="description">{{ recipe.description | recipeDescription }}</span>
         </router-link>
       </li>
+      <p v-if="recipes.length <= 0" class="no-recipe">
+        Aucun recette ne correspond à la selection
+      </p>
     </ul>
-    <br><br>
+
+    <div id="pie" data-parallax="2"></div>
+
   </div>
 </template>
 
 <script>
+import Parallax from '../mixins/Parallax'
 export default {
   filters: require('../mixins/Filters'),
   data: function () {
@@ -69,6 +76,9 @@ export default {
     }, response => {
       this.$router.push('/')
     })
+
+    let parallax = Parallax
+    parallax.init()
   },
   methods: {
     sort: function () {
@@ -86,7 +96,6 @@ export default {
           filteredRecipes.push(this.city.recipes[i])
         }
       }
-
       this.recipes = filteredRecipes
     }
   }
