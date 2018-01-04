@@ -1,0 +1,58 @@
+.container
+  width 65%
+  margin 0 auto
+  #recipe
+    margin-top 10em
+    .recipe-image
+      position absolute
+      z-index 2
+      transform translateY(-35%)
+      img
+        height 28vw
+        width 28vw
+        object-fit cover
+        margin-left 3.5em
+        border-radius 5px
+    .recipe-details
+      background-color #FFF
+      box-shadow rgba(0, 0, 0, .10) 0 9px 20px 0
+      padding 3.5em
+      padding-top 2.5em
+      position relative
+      letter-spacing 2.31px
+      h1
+        color orange
+        font-size 1.9em
+        letter-spacing 3px
+        font-weight 900
+        min-width 250px
+        max-width 50%
+        letter-spacing 5.67px
+      h2
+        color blue
+        font-size 1.5em
+        margin-bottom 1em
+        letter-spacing 2.38px
+    .recipe-title,
+    .recipe-details__ingredients
+      margin-left 29.5vw
+    .recipe-title
+      position absolute
+      bottom calc(100% + .5em)
+    .recipe-details__ingredients
+      display inherit
+      line-height  1.7em
+    .recipe-details__recipe
+      margin-top 2em
+
+#tomatoes
+  position absolute
+  right 0
+  top 20vh
+  background-image url('/static/images/recipe/tomatoes.png')
+  width 850px
+  height 1280px
+  background-size contain
+  background-repeat no-repeat
+  transform rotateZ(21deg)
+  overflow hidden

@@ -1,16 +1,36 @@
 <template>
-  <div class="hello">
-    <h1>{{ recipe.name }}</h1>
-    <h2>Description</h2>
-    <p>{{ recipe.description }}</p>
-    <h2>Ingrédients</h2>
-    <p v-html="$options.filters.compiledMarkdown(recipe.ingredients)"></p>
-    <h2>Recette</h2>
-    <p v-html="$options.filters.compiledMarkdown(recipe.recipe)"></p>
-    <p>
-      <router-link to="/">{{ $t('buttons.home') }}</router-link>
-    </p>
+  <div>
+    <div class="container">
+      <div id="recipe">
+        <div class="recipe-image">
+          <img :src="$options.filters.formatUrl(recipe.image.url)" :alt="recipe.name">
+        </div>
+        <div class="recipe-details">
+          <div class="recipe-title">
+            <h1>{{ recipe.name }}</h1>
+          </div>
+          <div class="recipe-content">
+            <div class="recipe-details__ingredients">
+              <h2>Ingredients</h2>
+              <div v-html="$options.filters.compiledMarkdown(recipe.ingredients)" class="content"></div>
+            </div>
+            <div class="recipe-details__recipe">
+              <h2>Recette</h2>
+              <div v-html="$options.filters.compiledMarkdown(recipe.recipe)" class="content"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- <div id="tomatoes"></div> -->
   </div>
+  <!-- <h1>{{ recipe.name }}</h1>
+  <h2>Description</h2>
+  <p>{{ recipe.description }}</p>
+  <h2>Ingrédients</h2>
+  <p v-html="$options.filters.compiledMarkdown(recipe.ingredients)"></p>
+  <h2>Recette</h2>
+  <p v-html="$options.filters.compiledMarkdown(recipe.recipe)"></p> -->
 </template>
 
 <script>
