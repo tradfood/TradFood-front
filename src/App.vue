@@ -1,9 +1,5 @@
 <template>
-  <div id="app">
-    <partial-header></partial-header>
-    <router-view></router-view>
-    <partial-footer></partial-footer>
-  </div>
+  <router-view></router-view>
 </template>
 
 <script>

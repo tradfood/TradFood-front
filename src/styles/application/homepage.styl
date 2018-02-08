@@ -1,0 +1,31 @@
+#homepage
+  #hola
+    display flex
+    justify-content space-between
+    align-items center
+    width 60%
+    margin 3em auto 2em
+    h1
+      color orange
+      font-weight bold
+      font-size 1.875em
+      margin-bottom 1.2em
+      letter-spacing 2px
+    p
+      margin-bottom 1.2em
+      letter-spacing 2px
+      line-height 1.188em
+      width 90%
+      min-width 300px
+    .main-image
+      background-image url('/static/images/homepage/hola.png')
+      background-size contain
+      background-repeat no-repeat
+      width 180%
+      min-width 340px
+      min-height 400px
+    +below(1000px)
+      margin 0 auto
+      width 80%
+      p
+        width 100%

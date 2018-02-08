@@ -3,6 +3,9 @@ import Vue from 'vue'
 import VueResource from 'vue-resource'
 import Bourgeon from 'bourgeon'
 import App from './App'
+// Here i'm importing partials
+import Header from './components/partials/Header.vue'
+import Footer from './components/partials/Footer.vue'
 
 // Ooooh, i18n has been init
 Vue.use(Bourgeon, {
@@ -12,13 +15,14 @@ Vue.use(Bourgeon, {
 // Wow, HTTP client for Vue
 Vue.use(VueResource)
 
-// Here i'm importing partials
-import Header from './components/partials/Header.vue'
-import Footer from './components/partials/Footer.vue'
+// Header and footer
+new Vue({
+  render: h => h(Header)
+}).$mount('header')
 
-// Here i'm adding partials components
-Vue.component('partial-header', Header)
-Vue.component('partial-footer', Footer)
+new Vue({
+  render: h => h(Footer)
+}).$mount('footer')
 
 // Here i'm rendering the Vue
 /* eslint-disable no-new */
