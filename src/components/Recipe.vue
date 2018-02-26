@@ -10,6 +10,17 @@
             <h1>{{ recipe.name }}</h1>
           </div>
           <div class="recipe-content">
+            <div class="recipe-details__informations">
+              <h2>Informations</h2>
+              <ul>
+                <li>Nombre de pièces</li>
+                <li>Temps de préparation</li>
+                <li>Temps de cuisson</li>
+                <li>Type de plat</li>
+                <li>Difficulté</li>
+                <li>Saison</li>
+              </ul>
+            </div>
             <div class="recipe-details__ingredients">
               <h2>Ingredients</h2>
               <div v-html="$options.filters.compiledMarkdown(recipe.ingredients)" class="content"></div>
@@ -22,7 +33,7 @@
         </div>
       </div>
     </div>
-    <!-- <div id="tomatoes"></div> -->
+    <div id="tomatoes"></div>
   </div>
   <!-- <h1>{{ recipe.name }}</h1>
   <h2>Description</h2>
@@ -53,6 +64,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
+<style lang="stylus">
   @import "../styles/application/recipe"
 </style>

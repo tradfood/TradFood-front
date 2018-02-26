@@ -5,7 +5,7 @@
         <li><a href="/bordeaux">Villes</a></li>
         <li><a href="/bordeaux">Recettes</a></li>
         <li id="logo"><a href="/">
-            <img src="static/images/logo.svg" alt="">
+            <img src="/static/images/logo.svg" alt="">
           </a></li>
         <li><a href="/about">A propos</a></li>
         <li><a href="/contact">Contact</a></li>

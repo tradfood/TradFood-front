@@ -34,25 +34,37 @@
         margin-bottom 1em
         letter-spacing 2.38px
     .recipe-title,
-    .recipe-details__ingredients
+    .recipe-details__informations
       margin-left 29.5vw
     .recipe-title
       position absolute
       bottom calc(100% + .5em)
+    .recipe-details__informations,
     .recipe-details__ingredients
       display inherit
       line-height  1.7em
+    .recipe-details__ingredients
+      margin-top 2em
+      p
+        display none
+      ul
+        display inline-flex
+        flex-wrap wrap
+      li
+        width 50%
     .recipe-details__recipe
       margin-top 2em
+      p
+        margin-bottom .8em
 
 #tomatoes
-  position absolute
+  position fixed
   right 0
-  top 20vh
+  top 12vh
   background-image url('/static/images/recipe/tomatoes.png')
-  width 850px
-  height 1280px
+  width 650px
+  height 835px
   background-size contain
   background-repeat no-repeat
   transform rotateZ(21deg)
-  overflow hidden
+  z-index -1
