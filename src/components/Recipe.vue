@@ -13,12 +13,12 @@
             <div class="recipe-details__informations">
               <h2>Informations</h2>
               <ul>
-                <li>Nombre de pièces</li>
-                <li>Temps de préparation</li>
-                <li>Temps de cuisson</li>
-                <li>Type de plat</li>
-                <li>Difficulté</li>
-                <li>Saison</li>
+                <li>Nombre de pièces: {{ recipe.servings }}</li>
+                <li>Temps de préparation: {{ recipe.preparation_time }}</li>
+                <li>Temps de cuisson: {{ recipe.cooking_time }}</li>
+                <li>Type de plat: {{ $t(`recipe.filters.mealType.${recipe.meal_type.replace(/\s+/g, '-')}`) }}</li>
+                <li>Difficulté: {{ $t(`recipe.filters.difficulty.${recipe.difficulty}`) }}</li>
+                <li>Saison: {{ $t(`recipe.filters.season.${recipe.season}`) }}</li>
               </ul>
             </div>
             <div class="recipe-details__ingredients">
@@ -47,12 +47,12 @@
 <script>
 export default {
   filters: require('../mixins/Filters'),
-  data: function () {
+  data () {
     return {
       recipe: []
     }
   },
-  mounted: function () {
+  mounted () {
     const url = 'https://tradfood.fr/' + this.$route.params.city + '/' + this.$route.params.recipe + '.json'
     this.$http.get(url).then(response => {
       this.recipe = response.body

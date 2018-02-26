@@ -1,15 +1,15 @@
 var marked = require('marked')
 
 module.exports = {
-  capitalize: function (value, key) {
+  capitalize (value, key) {
     if (!value) return ''
     value = value.toString()
     return value.charAt(0).toUpperCase() + value.slice(1)
   },
-  compiledMarkdown: function (input) {
+  compiledMarkdown (input) {
     return marked(input, { sanitize: true })
   },
-  recipeDescription: function (input) {
+  recipeDescription (input) {
     let s = input.split(' ')
     let l = 100
     let r = ''
@@ -21,7 +21,7 @@ module.exports = {
     r += '...'
     return r
   },
-  formatUrl: function (input) {
+  formatUrl (input) {
     return 'https://tradfood.fr/' + input
   }
 }

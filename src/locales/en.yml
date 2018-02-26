@@ -8,3 +8,18 @@ buttons:
 locales:
   fr: French
   en: English
+recipe:
+  filters:
+    difficulty:
+      1: 'Easy'
+      2: 'Quite Difficult'
+      3: 'Difficult'
+    mealType:
+      starter: 'Starter'
+      main-course: 'Main course'
+      dessert: 'Dessert'
+    season:
+      summer: 'Summer'
+      autumn: 'Autumn'
+      spring: 'Spring'
+      winter: 'Winter'
