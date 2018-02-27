@@ -1,6 +1,33 @@
 #sort
-  display block
-  text-align center
+  display flex
+  justify-content space-between
+  width 40%
+  margin 2em auto
+  padding 2em
+  border-radius 5px
+  box-shadow 0 2px 20px 0 rgba(0, 0, 0, .1)
+  h2
+    margin-bottom 1.2em
+  .radio-group
+    display block
+    input[type='radio']
+      appearance none
+      width 15px
+      height 15px
+      box-shadow inset 0 0 0 0.3em #fff, 0 0 0.1em
+      border-radius 50%
+      transition 0.2s
+      cursor pointer
+      color #363945
+      margin 0 .6em 0 .4em
+      vertical-align -3px
+      &:checked
+        background-color orange
+        &+label
+          display none
+      &:checked,
+      &:focus
+        outline none
 #recipes
   display flex
   width 65%
@@ -23,6 +50,7 @@
       height 19.5vw
       max-height 260px
       object-fit cover
+      border-radius 5px
     .title
       display flex
       flex-wrap wrap

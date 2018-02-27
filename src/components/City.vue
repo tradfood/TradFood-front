@@ -1,18 +1,15 @@
 <template>
   <div>
-    <h1>{{ city.name }}</h1>
-    <p>{{ city.description }}</p>
-    <router-link to="/">{{ $t('buttons.home') }}</router-link>
-
     <section id="sort">
       <div class="radio-group">
-        <h2>Mealtype</h2>
+        <h2>{{ $t('city.difficulty') }}</h2>
         <span v-for="option in filtersOptions.mealType">
           <label :for="'difficulty-'+option.value">{{ option.text }}</label>
           <input type="radio" name="mealType" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.mealType' @change='sort'>
         </span>
-
-        <h2>Difficulty</h2>
+      </div>
+      <div class="radio-group">
+        <h2>{{ $t('city.mealType') }}</h2>
         <span v-for="option in filtersOptions.difficulty">
           <label :for="'mealType-'+option.value">{{ option.text }}</label>
           <input type="radio" name="difficulty" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.difficulty' @change='sort'>
@@ -103,6 +100,6 @@ export default {
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
-<style lang="stylus" scoped>
+<style lang="stylus">
   @import "../styles/application/city"
 </style>

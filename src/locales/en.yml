@@ -8,6 +8,9 @@ buttons:
 locales:
   fr: French
   en: English
+city:
+  difficulty: 'Difficulty'
+  mealType: 'Meal Type'
 recipe:
   filters:
     difficulty:
