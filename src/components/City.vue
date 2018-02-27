@@ -4,15 +4,15 @@
       <div class="radio-group">
         <h2>{{ $t('city.difficulty') }}</h2>
         <span v-for="option in filtersOptions.mealType">
-          <label :for="'difficulty-'+option.value">{{ option.text }}</label>
           <input type="radio" name="mealType" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.mealType' @change='sort'>
+          <label :for="'difficulty-'+option.value">{{ option.text }}</label>
         </span>
       </div>
       <div class="radio-group">
         <h2>{{ $t('city.mealType') }}</h2>
         <span v-for="option in filtersOptions.difficulty">
-          <label :for="'mealType-'+option.value">{{ option.text }}</label>
           <input type="radio" name="difficulty" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.difficulty' @change='sort'>
+          <label :for="'mealType-'+option.value">{{ option.text }}</label>
         </span>
       </div>
     </section>
@@ -41,7 +41,7 @@
 import Parallax from '../mixins/Parallax'
 export default {
   filters: require('../mixins/Filters'),
-  data: function () {
+  data () {
     return {
       city: [],
       recipes: '',
@@ -65,7 +65,7 @@ export default {
       }
     }
   },
-  mounted: function () {
+  mounted () {
     const url = 'https://tradfood.fr/' + this.$route.params.city + '.json'
     this.$http.get(url).then(response => {
       this.city = response.body
@@ -78,7 +78,7 @@ export default {
     parallax.init()
   },
   methods: {
-    sort: function () {
+    sort () {
       var filteredRecipes = []
       var selectedDifficulty = this.filtersData.difficulty
       var selectedMealType = this.filtersData.mealType
@@ -94,6 +94,9 @@ export default {
         }
       }
       this.recipes = filteredRecipes
+    },
+    uncheck () {
+      console.log(this)
     }
   }
 }

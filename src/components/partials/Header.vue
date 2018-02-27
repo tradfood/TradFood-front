@@ -7,8 +7,8 @@
         <li id="logo"><a href="/">
             <img src="/static/images/logo.svg" alt="">
           </a></li>
-        <li><a href="/about">A propos</a></li>
-        <li><a href="/contact">Contact</a></li>
+        <li><a href="/a-propos">A propos</a></li>
+        <li><a href="mailto:contact@tradfood.fr">Contact</a></li>
       </ul>
     </nav>
   </header>

@@ -10,6 +10,11 @@
     margin-bottom 1.2em
   .radio-group
     display block
+    span
+      display inline-flex
+      align-items center
+    label
+      color middleGrey
     input[type='radio']
       appearance none
       width 15px
@@ -19,19 +24,20 @@
       transition 0.2s
       cursor pointer
       color #363945
-      margin 0 .6em 0 .4em
-      vertical-align -3px
+      margin 0 1.2em 0 .5em
+      order 2
       &:checked
         background-color orange
         &+label
-          display none
+          color black
+          order 1
       &:checked,
       &:focus
         outline none
 #recipes
   display flex
   width 65%
-  flex-wrap wrap
+  flex-flow row wrap
   justify-content space-between
   margin .5em auto 0
   max-width 860px
