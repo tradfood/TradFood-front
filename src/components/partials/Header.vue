@@ -2,12 +2,20 @@
   <header>
     <nav>
       <ul>
-        <li><a href="/bordeaux">Villes</a></li>
-        <li><a href="/bordeaux">Recettes</a></li>
-        <li id="logo"><a href="/">
+        <li>
+          <router-link :to="{name: 'city', params: {city: 'bordeaux'} }">Villes</router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'city', params: {city: 'bordeaux'} }">Recettes</router-link>
+        </li>
+        <li id="logo">
+          <router-link :to="{name: 'home'}">
             <img src="/static/images/logo.svg" alt="">
-          </a></li>
-        <li><a href="/a-propos">A propos</a></li>
+          </router-link>
+        </li>
+        <li>
+          <router-link :to="{name: 'about'}">A propos</router-link>
+        </li>
         <li><a href="mailto:contact@tradfood.fr">Contact</a></li>
       </ul>
     </nav>

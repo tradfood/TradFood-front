@@ -7,7 +7,8 @@ import RecipeComponent from 'components/Recipe'
 export default [
   {
     path: '/',
-    component: WelcomeComponent
+    component: WelcomeComponent,
+    name: 'home'
   },
   {
     path: '*',
@@ -16,7 +17,8 @@ export default [
   },
   {
     path: '/a-propos',
-    component: AboutComponent
+    component: AboutComponent,
+    name: 'about'
   },
   {
     path: '/:city',
