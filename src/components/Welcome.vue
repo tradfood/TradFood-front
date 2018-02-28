@@ -24,7 +24,9 @@
     </div>
     <div id="search">
       <h2>Rechercher une recette</h2>
-
+      <router-link :to="{name: 'city', params: {city: 'bordeaux', mealType: 'starter', difficulty: '1'} }">
+        Bordeaux
+      </router-link>
     </div>
     <div class="trends">
       <h2>Tendences</h2>

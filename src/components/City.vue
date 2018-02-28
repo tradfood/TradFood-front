@@ -46,8 +46,8 @@ export default {
       city: [],
       recipes: '',
       filtersData: {
-        mealType: 'all',
-        difficulty: 'all'
+        mealType: this.$route.params.mealType || 'all',
+        difficulty: this.$route.params.difficulty || 'all'
       },
       filtersOptions: {
         mealType: [
@@ -70,6 +70,7 @@ export default {
     this.$http.get(url).then(response => {
       this.city = response.body
       this.recipes = response.body.recipes
+      this.sort()
     }, response => {
       this.$router.push('/')
     })
