@@ -26,3 +26,9 @@ recipe:
       autumn: 'Autumn'
       spring: 'Spring'
       winter: 'Winter'
+about:
+  description:
+    - Trad’Food est une plateforme en ligne ouverte à tous. Elle permet à chacun, qu’il soit local ou touriste, de découvrir ou de redécouvrir, les recettes emblématiques du terroir français, mais aussi les lieux où les déguster.
+    - Avec une première version axée sur les plats traditionnels de Bordeaux et ses alentours, TradFood a pour but final de proposer à ses utilisateurs un contenu plus large recensant les richesses gastronomiques des différentes régions françaises.
+    - Grâce à la liste de restaurants présents sur Trad’ Food, chacun pourra aisément déguster chacuns des plats traditionnels proposés, mais aussi les préparer grâce au large panel de recettes et de conseils accessibles sur le site.
+    - Ce projet a été créé par une équipe de 6 étudiants en MMI à l’IUT Bordeaux Montaigne, dans le cadre d’un projet d’intégration web sur l’année scolaire 2016-2017. Ce dernier est basé sur le thème “manger sur Bordeaux”.
