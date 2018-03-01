@@ -18,16 +18,25 @@ export default [
   {
     path: '/a-propos',
     component: AboutComponent,
-    name: 'about'
+    name: 'about',
+    meta: {
+      title: 'A Propos'
+    }
   },
   {
     path: '/:city',
     component: CityComponent,
-    name: 'city'
+    name: 'city',
+    meta: {
+      title: 'Ville'
+    }
   },
   {
     path: '/:city/:recipe',
     component: RecipeComponent,
-    name: 'recipe'
+    name: 'recipe',
+    meta: {
+      title: 'Recette'
+    }
   }
 ]

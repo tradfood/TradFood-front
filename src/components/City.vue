@@ -71,6 +71,7 @@ export default {
       this.city = response.body
       this.recipes = response.body.recipes
       this.sort()
+      this.title()
     }, response => {
       this.$router.push('/')
     })
@@ -98,6 +99,9 @@ export default {
     },
     uncheck () {
       console.log(this)
+    },
+    title () {
+      document.title = this.city.name + ' | TradFood'
     }
   }
 }

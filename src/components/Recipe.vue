@@ -56,9 +56,15 @@ export default {
     const url = 'https://tradfood.fr/' + this.$route.params.city + '/' + this.$route.params.recipe + '.json'
     this.$http.get(url).then(response => {
       this.recipe = response.body
+      this.title()
     }, response => {
       console.log(response)
     })
+  },
+  methods: {
+    title () {
+      document.title = this.recipe.name + ' | TradFood'
+    }
   }
 }
 </script>
