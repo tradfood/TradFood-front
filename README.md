@@ -1,27 +1,16 @@
-# tradfood
+# TradFood
+TradFood front-end development (w/ express server in NodeJS)
 
-> TradFood front-end development (w/ express server in NodeJS)
 
-## Build Setup
+## Contributing
 
-``` bash
-# install dependencies
-npm install
+1. Fork it (https://github.com/tradfood/tradfood-front/fork)
+2. Create your feature branch (`git checkout -b my-new-feature`)
+3. Commit your changes (`git commit -am 'Add some feature'`)
+4. Push to the branch (`git push origin my-new-feature`)
+5. Create a new Pull Request
 
-# serve with hot reload at localhost:8080
-npm run dev
 
-# build for production with minification
-npm run build
+## License
 
-# run unit tests
-npm run unit
-
-# run e2e tests
-npm run e2e
-
-# run all tests
-npm test
-```
-
-For detailed explanation on how things work, checkout the [guide](http://vuejs-templates.github.io/webpack/) and [docs for vue-loader](http://vuejs.github.io/vue-loader).
+Copyright 2018 - [Bastien Robert](https://bastienrobert.fr) / [GitHub - Bastien Robert](https://github.com/bastienrobert)
