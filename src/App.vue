@@ -7,6 +7,6 @@ export default {}
 </script>
 
 <style lang="stylus">
-@import "styles/theme"
 @import "styles/application"
+@import "styles/theme/components/*"
 </style>

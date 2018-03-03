@@ -1,13 +1,24 @@
 button,
 button:active,
-button:focus
+button:focus,
+.button,
+input[type='submit']
+  display inline-block
   border 0
+  border-radius 5px
+  padding .6em 2em
   background orange
   color white
   cursor pointer
   margin 0 5px
+  text-transform lowercase
+  text-align center
+  font-family bodoni
+  border 3px solid orange
+  transition all .2s
   &:disabled,
   &:hover
-    background blue
+    background white
+    color orange
   &:disabled
     cursor default

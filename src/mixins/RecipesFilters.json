@@ -1,0 +1,14 @@
+{
+  "mealType": [
+    { "text": "Tout", "value": "all" },
+    { "text": "Entrée", "value": "starter" },
+    { "text": "Plat", "value": "main course" },
+    { "text": "Dessert", "value": "dessert" }
+  ],
+  "difficulty": [
+    { "text": "Tout", "value": "all" },
+    { "text": "Facile", "value": "1" },
+    { "text": "Moyen", "value": "2" },
+    { "text": "Difficile", "value": "3" }
+  ]
+}

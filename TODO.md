@@ -1,8 +1,5 @@
 # TODO
 - Homepage
+  - Fix the non-squares images
 - Footer
 - Responsive
-
-
-## On production
-- Links are dead on netlify'production

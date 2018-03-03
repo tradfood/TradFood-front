@@ -49,20 +49,7 @@ export default {
         mealType: this.$route.params.mealType || 'all',
         difficulty: this.$route.params.difficulty || 'all'
       },
-      filtersOptions: {
-        mealType: [
-          { text: 'Tout', value: 'all' },
-          { text: 'Entrée', value: 'starter' },
-          { text: 'Plat', value: 'main course' },
-          { text: 'Dessert', value: 'dessert' }
-        ],
-        difficulty: [
-          { text: 'Tout', value: 'all' },
-          { text: 'Facile', value: '1' },
-          { text: 'Moyen', value: '2' },
-          { text: 'Difficile', value: '3' }
-        ]
-      }
+      filtersOptions: require('../mixins/RecipesFilters.json')
     }
   },
   mounted () {
@@ -75,7 +62,6 @@ export default {
     }, response => {
       this.$router.push('/')
     })
-
     let parallax = Parallax
     parallax.init()
   },
