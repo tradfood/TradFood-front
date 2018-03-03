@@ -1,5 +1,5 @@
 # TODO
-- Homepage
-  - Fix the non-squares images
+- Last CSS fix
+- Images for about (team)
 - Footer
 - Responsive
