@@ -1,5 +1,5 @@
 <template>
-  <footer>
+  <footer v-show="this.$route.name !== 'recipe'">
     <div>
       <h2>Abonnez-vous !</h2>
       <div id="mc_embed_signup">
