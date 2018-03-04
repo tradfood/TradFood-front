@@ -1,5 +1,4 @@
 # TODO
-- Last CSS fix
-- Images for about (team)
-- Footer
 - Responsive
+- Images for about (team)
+- Recette (last CSS fix)
