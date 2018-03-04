@@ -10,5 +10,92 @@ header
       font-weight bold
       font-size 1.15em
       letter-spacing 3px
+  #menu-toggle
+    display none
+    z-index 999
+    display none
+    color blue
+    position absolute
+    margin-left 2px
+    margin-top 14px
+    width 24px
+    height 4px
+    background-color currentColor
+    top 1.5em
+    right 5%
+    border-radius 2px
+    transition rotate .2s
+    &:before
+      content ''
+      position absolute
+      top -7px
+      left 0
+      width 24px
+      height 4px
+      background-color currentColor
+      border-radius 2px
+      transition rotate .2s
+    &:after
+      content ''
+      position absolute
+      top 7px
+      left 0
+      width 24px
+      height 4px
+      background-color currentColor
+      border-radius 2px
+    &.cross
+      transform rotate(45deg)
+      &::before
+        top 0
+        transform rotate(90deg)
+      &::after
+        display none
+  +below(736px)
+    nav
+      &:after
+        content ''
+        position fixed
+        top 0
+        bottom 0
+        left 0
+        right 0
+        background-color #FFF
+        z-index 1
+        display none
+      &.visible
+        &:after
+          display block
+        li
+          display block
+      ul
+        justify-content center
+        flex-wrap wrap
+      #menu-toggle
+        display block
+      li
+        display none
+        position fixed
+        order 2
+        flex 0 1 100%
+        text-align center
+        z-index 2
+        &:first-child
+          margin-top 30%
+        &:nth-child(2)
+          margin-top 45%
+        &:nth-child(4)
+          margin-top 60%
+        &:last-child
+          margin-top 75%
+        &#logo
+          display block
+          position relative
+          margin-top inherit
+          order 1
+      img
+        max-height 65px
+        position relative
+        z-index 2
   #logo
     min-width 200px

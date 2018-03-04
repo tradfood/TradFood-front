@@ -18,12 +18,37 @@
         </li>
         <li><a href="mailto:contact@tradfood.fr">Contact</a></li>
       </ul>
+      <a href="#" id="menu-toggle" @click.prevent="menuToggle"></a>
     </nav>
   </header>
 </template>
 
 <script>
-export default {}
+export default {
+  data () {
+    return {
+      menu: null
+    }
+  },
+  mounted () {
+    this.menu = document.getElementById('menu-toggle')
+  },
+  methods: {
+    menuToggle () {
+      let nav = document.getElementsByTagName('nav')[0]
+      this.menu.classList.toggle('cross')
+      nav.classList.toggle('visible')
+      document.body.classList.toggle('overflow')
+    }
+  },
+  watch: {
+    $route (to, from) {
+      if (this.menu.classList.contains('cross')) {
+        this.menuToggle()
+      }
+    }
+  }
+}
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
