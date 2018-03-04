@@ -32,7 +32,7 @@
             <label :for="'mealType-'+option.value">{{ option.text }}</label>
           </span>
         </div>
-        <input type="submit" value="Envoyer">
+        <input type="submit" value="Envoyer" @click.prevent="redirect">
       </form>
     </div>
     <div id="trends">
@@ -84,8 +84,8 @@ export default {
       recipes: [],
       trends: null,
       filtersData: {
-        mealType: this.$route.params.mealType || 'all',
-        difficulty: this.$route.params.difficulty || 'all'
+        mealType: 'all',
+        difficulty: 'all'
       },
       filtersOptions: require('../mixins/RecipesFilters.json')
     }
@@ -109,6 +109,16 @@ export default {
     shuffle (arr, x) {
       const shuffled = arr.sort(() => 0.5 - Math.random())
       return shuffled.slice(0, x)
+    },
+    redirect () {
+      this.$router.push({
+        name: 'city',
+        params: {
+          city: this.city.url,
+          mealType: this.filtersData.mealType,
+          difficulty: this.filtersData.difficulty
+        }
+      })
     }
   }
 }
