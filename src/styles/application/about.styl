@@ -14,15 +14,22 @@
       line-height 1.2
   .team
     display flex
-    flex-wrap wrap
+    flex-flow row wrap
     justify-content space-between
     a
-      width 20%
+      width 21%
+      margin-bottom 3em
     img
       object-fit cover
       width 100%
       height 100%
       border-radius 5px
+  +below(875px)
+    .team a
+      width 48%
+      margin-bottom 1.5em
+      &:last-child
+        display none
   #plate
     position fixed
     right -25%
@@ -34,3 +41,5 @@
     background-repeat no-repeat
     transform rotateZ(57deg)
     z-index -1
+    +below(875px)
+      display none

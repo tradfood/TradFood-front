@@ -20,10 +20,14 @@ export default {
   data () {
     return {
       team: [
-        {name: 'Joshua', slug: 'joshua', link: '#'},
+        {name: 'Joshua', slug: 'joshua', link: 'https://www.linkedin.com/in/joshua-richard-12b9a4129/'},
         {name: 'Bastien', slug: 'bastien', link: 'https://bastienrobert.fr'},
-        {name: 'Roxane', slug: 'roxane', link: '#'},
-        {name: 'Clément', slug: 'clement', link: '#'}
+        {name: 'Roxane', slug: 'roxane', link: 'https://roxanezebina.com'},
+        {name: 'Clément', slug: 'clement', link: '#'},
+        {name: 'Lilou', slug: 'lilou', link: 'https://drive.google.com/file/d/16iYHuIFXYsAmBy1C65yBOqkRyln--BLd/view'},
+        {name: 'Milène', slug: 'milene', link: 'https://milene-jahanpour.fr'},
+        {name: 'Nino', slug: 'nino', link: 'https://treyssatvincent.fr'},
+        {name: '', slug: '', link: ''} // Simplest technic to align flexbox
       ]
     }
   },

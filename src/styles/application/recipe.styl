@@ -58,6 +58,31 @@
       margin-top 2em
       p
         margin-bottom .8em
+  +below(1024px)
+    width 80%
+    #recipe .recipe-details h1
+      max-width inherit
+  +below(736px)
+    width 100%
+  +below(667px)
+    #recipe
+      margin-top 3em
+      .recipe-title,
+      .recipe-details__informations
+        margin-left 0
+      .recipe-title
+        position inherit
+        text-align center
+        margin-bottom 2em
+      .recipe-details
+        box-shadow none
+      .recipe-image
+        position inherit
+        transform inherit
+        img
+          margin-left 0
+          width 100%
+          min-height 290px
 
 #tomatoes
   position fixed
@@ -70,3 +95,5 @@
   background-repeat no-repeat
   transform rotateZ(21deg)
   z-index -1
+  +below(875px)
+    display none

@@ -55,3 +55,13 @@ footer
       &:hover
         background-color transparent
         color blue
+  +below(1024px)
+    width 90%
+  +below(875px)
+    flex-wrap wrap
+    div:first-child
+      width 90%
+      margin-bottom 2em
+  +below(568px)
+    div:first-child
+      width 100%

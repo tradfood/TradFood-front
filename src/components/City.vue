@@ -67,24 +67,18 @@ export default {
   },
   methods: {
     sort () {
-      var filteredRecipes = []
-      var selectedDifficulty = this.filtersData.difficulty
-      var selectedMealType = this.filtersData.mealType
-
-      for (let i = 0; i < this.city.recipes.length; i++) {
-        if (
-          (this.city.recipes[i].difficulty === parseInt(selectedDifficulty) ||
-          selectedDifficulty === 'all') &&
-          (this.city.recipes[i].meal_type === selectedMealType ||
-          selectedMealType === 'all')
-        ) {
-          filteredRecipes.push(this.city.recipes[i])
-        }
-      }
+      let filteredRecipes = []
+      this.city.recipes.map((k, v) => {
+        this.filter(k) ? filteredRecipes.push(k) : null
+      })
       this.recipes = filteredRecipes
     },
-    uncheck () {
-      console.log(this)
+    filter (v) {
+      if ((v.difficulty === parseInt(this.filtersData.difficulty) || this.filtersData.difficulty === 'all') &&
+        (v.meal_type === this.filtersData.mealType || this.filtersData.mealType === 'all')) {
+        return true
+      }
+      return false
     },
     title () {
       document.title = this.city.name + ' | TradFood'
