@@ -6,7 +6,7 @@
     </div>
     <div class="team">
       <a :href="person.link" v-for="person in team">
-        <img :src="'static/images/about/team/' + person.slug + '.jpg'" alt="">
+        <img :src="'static/images/about/team/' + person.slug + '.jpg'" alt="" v-if="person.slug">
       </a>
     </div>
     <div id="plate"></div>
@@ -27,7 +27,7 @@ export default {
         {name: 'Lilou', slug: 'lilou', link: 'https://drive.google.com/file/d/16iYHuIFXYsAmBy1C65yBOqkRyln--BLd/view'},
         {name: 'Milène', slug: 'milene', link: 'https://milene-jahanpour.fr'},
         {name: 'Nino', slug: 'nino', link: 'https://treyssatvincent.fr'},
-        {name: '', slug: '', link: ''} // Simplest technic to align flexbox
+        {name: ''} // Simplest technic to align flexbox
       ]
     }
   },
