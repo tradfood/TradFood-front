@@ -1,0 +1,17 @@
+##
+# Travis YAML
+##
+
+language : node_js
+
+node_js:
+  - "8"
+
+os :
+  - linux
+
+script : npm run build
+
+env :
+  global :
+    - TEST=true
