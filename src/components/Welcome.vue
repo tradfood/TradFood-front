@@ -19,17 +19,17 @@
       <h2>Rechercher une recette</h2>
       <form id="sort">
         <div class="radio-group">
-          <h3>{{ $t('city.difficulty') }}</h3>
+          <h3>{{ $t('city.mealType') }}</h3>
           <span v-for="option in filtersOptions.mealType">
-            <input type="radio" name="mealType" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.mealType'>
-            <label :for="'difficulty-'+option.value">{{ option.text }}</label>
+            <input type="radio" name="mealType" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.mealType'>
+            <label :for="'mealType-'+option.value">{{ option.text }}</label>
           </span>
         </div>
         <div class="radio-group">
-          <h3>{{ $t('city.mealType') }}</h3>
+          <h3>{{ $t('city.difficulty') }}</h3>
           <span v-for="option in filtersOptions.difficulty">
-            <input type="radio" name="difficulty" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.difficulty'>
-            <label :for="'mealType-'+option.value">{{ option.text }}</label>
+            <input type="radio" name="difficulty" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.difficulty'>
+            <label :for="'difficulty-'+option.value">{{ option.text }}</label>
           </span>
         </div>
         <input type="submit" value="Envoyer" @click.prevent="redirect">

@@ -2,17 +2,17 @@
   <div>
     <section id="sort">
       <div class="radio-group">
-        <h2>{{ $t('city.difficulty') }}</h2>
+        <h2>{{ $t('city.mealType') }}</h2>
         <span v-for="option in filtersOptions.mealType">
-          <input type="radio" name="mealType" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.mealType' @change='sort'>
-          <label :for="'difficulty-'+option.value">{{ option.text }}</label>
+          <input type="radio" name="mealType" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.mealType' @change='sort'>
+          <label :for="'mealType-'+option.value">{{ option.text }}</label>
         </span>
       </div>
       <div class="radio-group">
         <h2>{{ $t('city.mealType') }}</h2>
         <span v-for="option in filtersOptions.difficulty">
-          <input type="radio" name="difficulty" :value="option.value" :id="'mealType-'+option.value" v-model='filtersData.difficulty' @change='sort'>
-          <label :for="'mealType-'+option.value">{{ option.text }}</label>
+          <input type="radio" name="difficulty" :value="option.value" :id="'difficulty-'+option.value" v-model='filtersData.difficulty' @change='sort'>
+          <label :for="'difficulty-'+option.value">{{ option.text }}</label>
         </span>
       </div>
     </section>

@@ -52,7 +52,10 @@
       margin-bottom 1em
       text-transform inherit
     #sort
-      width 675px
+      width auto
+      box-sizing border-box
+      .radio-group
+        min-width 300px
     +below(875px)
       width 80%
       #sort
@@ -165,7 +168,6 @@
     +below(1024px)
       width 80%
     +below(875px)
-      width 90%;
       .recipes .recipe
         width 100%
         max-width none
