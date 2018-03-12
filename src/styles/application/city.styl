@@ -15,6 +15,10 @@
     width 19.5vw
     max-width 260px
     margin-bottom 1.7em
+    a
+      display flex
+      flex-wrap wrap
+      width 100%
     img
       width 100%
       height 19.5vw
@@ -43,6 +47,46 @@
       line-height 1.3em
       margin-top 1em
       color black
+    button
+      display none
+  +below(1024px)
+    width 80%
+    li
+      width 21.5vw
+      img
+        height 21.5vw
+  +below(875px)
+    width 90%;
+    li
+      width 100%
+      max-width none
+      box-shadow 0 2px 20px 0 rgba(black, .2)
+      a
+        flex-wrap nowrap
+        align-items center
+        justify-content space-between
+        min-height 170px
+      img
+        height 100%
+      button
+        display block
+        order 3
+        min-width 110px
+        margin 1em auto
+      .content
+        max-width 390px
+        margin 0 auto
+      .img-wrap
+        display inline-block
+        width 140px
+        height 140px
+        margin-right 15px
+        order 4
+      .title
+        order 1
+      .description
+        order 2
+        margin-top 0
 #pie
   position absolute
   right 0
@@ -51,3 +95,6 @@
   width 200px
   height 700px
   background-repeat no-repeat
+  z-index -1
+  +below(875px)
+    display none

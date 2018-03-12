@@ -20,11 +20,14 @@
     <ul id="recipes">
       <li v-for="recipe in recipes">
         <router-link :to="{name: 'recipe', params: {city: city.url, recipe: recipe.url} }">
-          <div class="img-wrap">
+          <span class="img-wrap">
             <img :src="$options.filters.formatUrl(recipe.image.url)" :alt="recipe.name">
-          </div>
-          <span class="title">{{ recipe.name }}</span>
-          <span class="description">{{ recipe.description | recipeDescription }}</span>
+          </span>
+          <span class="content">
+            <span class="title">{{ recipe.name }}</span>
+            <span class="description">{{ recipe.description | recipeDescription }}</span>
+            <button type="button" name="button">voir la recette</button>
+          </span>
         </router-link>
       </li>
       <p v-if="recipes.length <= 0" class="no-recipe">

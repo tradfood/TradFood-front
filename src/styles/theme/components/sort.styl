@@ -1,7 +1,8 @@
 #sort
   display flex
   justify-content space-between
-  width 40%
+  width 42.5%
+  min-width 595px
   margin 2em auto
   padding 2em
   border-radius 5px
@@ -38,3 +39,15 @@
       &:checked,
       &:focus
         outline none
+  +below(736px)
+    min-width inherit
+    width 85%
+  +below(665px)
+    flex-wrap wrap
+    width 50%
+    min-width 310px
+    .radio-group
+      width 100%
+      margin-bottom 1.5em
+      &:last-child
+        margin-bottom 0
