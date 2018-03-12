@@ -61,7 +61,7 @@ export default {
       this.city = response.body
       this.recipes = response.body.recipes
       this.sort()
-      this.title()
+      this.meta()
     }, response => {
       this.$router.push('/')
     })
@@ -83,8 +83,9 @@ export default {
       }
       return false
     },
-    title () {
+    meta () {
       document.title = this.city.name + ' | TradFood'
+      document.querySelector('meta[name="description"]').setAttribute('content', this.$options.filters.recipeDescription(this.city.description) + ' A découvrir sur TradFood !')
     }
   }
 }

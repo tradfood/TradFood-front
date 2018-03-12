@@ -36,7 +36,7 @@
       </form>
     </div>
     <div id="trends">
-      <h2>Tendences</h2>
+      <h2>Tendances</h2>
       <p>A popular method of cooking chicken in recent years<br> both in Barbeque contest as well as backyard barbeques</p>
       <div class="recipes">
         <div class="recipe" v-for="recipe in highlight">

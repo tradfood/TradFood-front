@@ -1,6 +1,4 @@
 # TODO
-- Responsive
-- Images for about (team)
-- Recette (last CSS fix)
-- Bugs on production URL
+- Schema.org
 - Version CSS Print
+- Recette

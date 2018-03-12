@@ -56,14 +56,15 @@ export default {
     const url = 'https://tradfood.fr/' + this.$route.params.city + '/' + this.$route.params.recipe + '.json'
     this.$http.get(url).then(response => {
       this.recipe = response.body
-      this.title()
+      this.meta()
     }, response => {
       console.log(response)
     })
   },
   methods: {
-    title () {
+    meta () {
       document.title = this.recipe.name + ' | TradFood'
+      document.querySelector('meta[name="description"]').setAttribute('content', this.$options.filters.recipeDescription(this.recipe.description) + ' A découvrir sur TradFood !')
     }
   }
 }
