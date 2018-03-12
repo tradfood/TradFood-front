@@ -53,8 +53,8 @@
     </div>
     <div id="display">
       <h2>Recettes à l'affiche</h2>
-      <div class="recipes">
-        <div class="recipe" v-for="recipe in recipes">
+      <ul class="recipes">
+        <li class="recipe" v-for="recipe in recipes">
           <div class="image-container">
             <img :src="$options.filters.formatUrl(recipe.image.url)" :alt="recipe.name">
           </div>
@@ -65,8 +65,8 @@
               en savoir +
             </router-link>
           </div>
-        </div>
-      </div>
+        </li>
+      </ul>
     </div>
     <div id="bread" data-parallax="2"></div>
     <div id="plate"></div>
