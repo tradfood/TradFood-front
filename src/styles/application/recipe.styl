@@ -62,6 +62,17 @@
       margin-top 2em
       p
         margin-bottom .8em
+  +above(1500px)
+    max-width 1000px
+    #recipe
+      .recipe-image img
+        max-width 430px
+        max-height 430px
+      .recipe-title,
+      .recipe-content .recipe-details__informations
+        margin-left 455px
+      .recipe-content .recipe-details__ingredients
+        margin-top 3em
   +below(1024px)
     width 80%
     #recipe .recipe-details h1
