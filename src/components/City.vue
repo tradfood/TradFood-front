@@ -56,7 +56,7 @@ export default {
     }
   },
   mounted () {
-    const url = 'https://tradfood.fr/' + this.$route.params.city + '.json'
+    const url = 'https://api.tradfood.fr/' + this.$route.params.city + '.json'
     this.$http.get(url).then(response => {
       this.city = response.body
       this.recipes = response.body.recipes
