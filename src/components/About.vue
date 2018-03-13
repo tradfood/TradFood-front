@@ -25,7 +25,7 @@ export default {
         {name: 'Roxane', slug: 'roxane', link: 'https://roxanezebina.com'},
         {name: 'Clément', slug: 'clement', link: '#'},
         {name: 'Lilou', slug: 'lilou', link: 'https://drive.google.com/file/d/16iYHuIFXYsAmBy1C65yBOqkRyln--BLd/view'},
-        {name: 'Milène', slug: 'milene', link: 'https://milene-jahanpour.fr'},
+        {name: 'Milène', slug: 'milene', link: 'http://milene-jahanpour.fr/'},
         {name: 'Nino', slug: 'nino', link: 'https://treyssatvincent.fr'},
         {name: ''} // Simplest technic to align flexbox
       ]
