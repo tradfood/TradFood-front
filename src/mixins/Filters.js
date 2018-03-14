@@ -22,6 +22,6 @@ module.exports = {
     return r
   },
   formatUrl (input) {
-    return 'https://tradfood.fr/' + input
+    return 'https://api.tradfood.fr/' + input
   }
 }
