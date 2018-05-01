@@ -21,7 +21,7 @@
     <div>
       <h2>Plus</h2>
       <router-link :to="{name: 'about'}">Notre équipe</router-link>
-      <a href="https://github.com/tradfood/teams" target="_blank">Qui sommes-nous ?</a>
+      <a href="https://github.com/orgs/tradfood/teams" target="_blank">Qui sommes-nous ?</a>
     </div>
     <div>
       <h2>Contactez-nous</h2>
