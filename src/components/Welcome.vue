@@ -37,7 +37,7 @@
     </div>
     <div id="trends">
       <h2>Tendances</h2>
-      <p>A popular method of cooking chicken in recent years<br> both in Barbeque contest as well as backyard barbeques</p>
+      <p>Découvrez nos dernières recettes tendances<br> et savourez-les en apprenant à les cuisiner vous-même !</p>
       <div class="recipes">
         <div class="recipe" v-for="recipe in highlight">
           <img :src="$options.filters.formatUrl(recipe.image.url)" :alt="recipe.name">
@@ -102,7 +102,7 @@ export default {
     }, response => {
       console.log(response)
     })
-    let parallax = Parallax
+    let parallax = new Parallax()
     parallax.init()
   },
   methods: {

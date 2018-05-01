@@ -65,7 +65,7 @@ export default {
     }, response => {
       this.$router.push('/')
     })
-    let parallax = Parallax
+    let parallax = new Parallax()
     parallax.init()
   },
   methods: {

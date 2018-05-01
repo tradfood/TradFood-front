@@ -54,7 +54,7 @@
       p
         display none
       ul
-        display inline-flex
+        display flex
         flex-wrap wrap
       li
         width 50%
@@ -81,6 +81,8 @@
     width 100%
     #recipe .recipe-image img
       max-width inherit
+    #recipe .recipe-details__ingredients ul li
+      width 100%
   +below(667px)
     #recipe
       margin-top 3em

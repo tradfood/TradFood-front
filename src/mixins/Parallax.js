@@ -1,4 +1,4 @@
-class Parallax {
+export default class Parallax {
 
   init () {
     this.els = []
@@ -24,5 +24,3 @@ class Parallax {
     }
   }
 }
-
-module.exports = new Parallax()
